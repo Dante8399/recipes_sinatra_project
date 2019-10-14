@@ -1,0 +1,13 @@
+=> [[32m#<Recipe:0x00007fffe9716858[0m id: [1;34m6[0m, name: [31m[1;31m"[0m[31mMac and Cheese[1;31m"[0m[31m[0m, description: [31m[1;31m"[0m[31mAdd mornay, cheese, and noodles[1;31m"[0m[31m[0m, user_id: [1;34m2[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe9716718[0m id: [1;34m8[0m, name: [31m[1;31m"[0m[31mCereal[1;31m"[0m[31m[0m, description: [31m[1;31m"[0m[31mAdd Milk[1;31m"[0m[31m[0m, user_id: [1;34m1[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe97165d8[0m id: [1;34m9[0m, name: [31m[1;31m"[0m[31mGrits[1;31m"[0m[31m[0m, description: [31m[1;31m"[0m[31mWhisk in water[1;31m"[0m[31m[0m, user_id: [1;34m1[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe9716498[0m id: [1;34m11[0m, name: [1;36mnil[0m, description: [31m[1;31m"[0m[31mFry it in skillet[1;31m"[0m[31m[0m, user_id: [1;34m3[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe9716358[0m
+  id: [1;34m14[0m,
+  name: [31m[1;31m"[0m[31mRice and Gravy[1;31m"[0m[31m[0m,
+  description: [31m[1;31m"[0m[31mSaute' onions in oil till soft. Add flour. Cook 2 mins, stirring. Add hot water slowly, whisking till thick. Pour over rice.[1;31m"[0m[31m[0m,
+  user_id: [1;36mnil[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe9716218[0m id: [1;34m15[0m, name: [31m[1;31m"[0m[31mCereal[1;31m"[0m[31m[0m, description: [31m[1;31m"[0m[31mAdd milk[1;31m"[0m[31m[0m, user_id: [1;36mnil[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe97160d8[0m id: [1;34m16[0m, name: [31m[1;31m"[0m[31mCereal[1;31m"[0m[31m[0m, description: [31m[1;31m"[0m[31mAdd milk[1;31m"[0m[31m[0m, user_id: [1;36mnil[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe9715f98[0m id: [1;34m17[0m, name: [31m[1;31m"[0m[31mCereal[1;31m"[0m[31m[0m, description: [31m[1;31m"[0m[31mAdd milk[1;31m"[0m[31m[0m, user_id: [1;36mnil[0m[32m>[0m,
+ [32m#<Recipe:0x00007fffe9715e58[0m id: [1;34m18[0m, name: [31m[1;31m"[0m[31mCereal[1;31m"[0m[31m[0m, description: [31m[1;31m"[0m[31mAdd milk[1;31m"[0m[31m[0m, user_id: [1;36mnil[0m[32m>[0m]
