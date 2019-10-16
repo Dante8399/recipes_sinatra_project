@@ -23,6 +23,23 @@ class RecipesController < ApplicationController
         erb :"recipes/new"
     end
 
+    get '/recipes/search' do
+        #@recipe = Recipe.find_by_name(params[:name])
+        erb :"recipes/search"
+        
+        
+    end
+
+    post '/recipes/results' do
+        
+        @recipe = Recipe.find_by_name(params[:name])
+        if @recipe
+        erb :"recipes/results"
+        else 
+            redirect '/recipes/search'
+        end
+    end
+
     # Shows one particular recipe
     get '/recipes/:id' do
         @recipe = Recipe.find_by_id(params[:id])
@@ -33,6 +50,15 @@ class RecipesController < ApplicationController
             redirect '/recipes'
         end
     end
+
+    
+
+    
+        
+
+
+    
+
 
     get '/recipes/:id/edit' do
         @recipe = Recipe.find_by_id(params[:id])
@@ -62,6 +88,13 @@ class RecipesController < ApplicationController
         else
             redirect "/recipes/new"
         end
+    end
+
+    post '/recipes/search' do
+        
+        @recipe = Recipe.find_by_name(params[:name])
+        
+         erb :"recipes/results"
     end
 
     delete '/recipes/:id'  do
