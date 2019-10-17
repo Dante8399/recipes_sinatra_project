@@ -7,5 +7,9 @@
 <input type="text" name="recipe[name]" value= "<%=@recipe.name%>">
 <label for="description"> Recipe:</label>
 <textarea name="recipe[description]" cols="50" rows="20"><%=@recipe.description%></textarea>
+<label for="ingredients"> Ingredients:</label>
+<input type ="text" name="ingredients[][name]" value = "<%=@ingredients0%>">
+<input type ="text" name="ingredients[][name]" value = "<%=@recipe.ingredients[1].name%>">
+<input type ="text" name="ingredients[][name]" value = "<%=@recipe.ingredients[2].name%>">
 <input type="submit">
 </form>

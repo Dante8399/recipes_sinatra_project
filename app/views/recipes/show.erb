@@ -5,7 +5,11 @@
 <br>
 <p>
 <%=@recipe.description %>
-<br>
+<br><h3>Ingredients:</h3>
+<% @recipe.ingredients.each do |ing|%>
+ <p><%= ing.name %></p>
+
+    <%end%>
 <br>
 <a href="/recipes/<%=@recipe.id%>/edit"><button>Edit</button></a>
 

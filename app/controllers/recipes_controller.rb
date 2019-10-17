@@ -20,7 +20,9 @@ class RecipesController < ApplicationController
 
     #CREATE new page
     get '/recipes/new' do
+
         erb :"recipes/new"
+        
     end
 
     get '/recipes/search' do
@@ -43,6 +45,7 @@ class RecipesController < ApplicationController
     # Shows one particular recipe
     get '/recipes/:id' do
         @recipe = Recipe.find_by_id(params[:id])
+        
 
         if @recipe
             erb :"recipes/show"
@@ -62,6 +65,11 @@ class RecipesController < ApplicationController
 
     get '/recipes/:id/edit' do
         @recipe = Recipe.find_by_id(params[:id])
+        if @recipe.ingredients[0]
+            @ingredient0 = @recipe.ingredients[0].name
+        else
+            @ingredient0 = ""
+        end
         erb :"recipes/edit"    
     
     end
@@ -80,10 +88,18 @@ class RecipesController < ApplicationController
 
 
     post '/recipes' do
+        
         @recipe = Recipe.new(name:params[:name],description:params[:description],user_id:session[:user_id])
-        #binding.pry
+        
+        
+        
 
-        if @recipe.save
+        if @recipe.save 
+            params[:ingredients].each do |i|
+                if i[:name] != ""
+                    Ingredient.create(name:i[:name], recipe_id:@recipe.id)
+                end
+            end
             redirect "/recipes/#{@recipe.id}"
         else
             redirect "/recipes/new"
