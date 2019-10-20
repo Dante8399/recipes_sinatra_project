@@ -22,8 +22,22 @@
 
 <form action="/recipes/<%=@recipe.id%>" method="POST">
 <input type="hidden" name="_method" value="delete">
-<input type="submit" value="Delete">
+<script>
+    function ConfirmDelete()
+    {
+      var x = confirm("Are you sure you want to delete?");
+      if (x)
+          return true;
+      else
+        return false;
+    }
+</script>    
+
+<button Onclick="return ConfirmDelete();" type="submit" name="actiondelete" value="1"><img src="images/action_delete.png" alt="Delete"></button>
+
 </form>
+
+
 
 
 

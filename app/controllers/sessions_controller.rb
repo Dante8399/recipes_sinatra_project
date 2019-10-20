@@ -26,7 +26,7 @@ class SessionController < ApplicationController
             redirect '/recipes'
 
         else
-            redirect '/login'
+            redirect '/try_again'
         end
     end
     
