@@ -69,15 +69,32 @@ class RecipesController < ApplicationController
             @ingredient0 = @recipe.ingredients[0].name
         else
             @ingredient0 = ""
+            
+        end
+        if @recipe.ingredients[1]
+            @ingredient1 = @recipe.ingredients[1].name
+        else
+            @ingredient1 = ""
+            
+        end
+        if @recipe.ingredients[2]
+            @ingredient2 = @recipe.ingredients[2].name
+        else
+            @ingredient2 = ""
+            
         end
         erb :"recipes/edit"    
     
     end
 
     patch '/recipes/:id' do
+        
         @recipe = Recipe.find_by_id(params[:id])
+        
 
-        if @recipe.update(params[:recipe])
+      
+
+        if @recipe.update(params[:recipe]) || @recipe.ingredients.update(params[:ingredients[0]])
             redirect "/recipes/#{@recipe.id}"
         else
             redirect "/recipes/#{@recipe.id}"

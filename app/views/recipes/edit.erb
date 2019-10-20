@@ -5,11 +5,13 @@
 <input type="hidden" name="_method" value="patch">
 <label for="name"> Recipe Name:</label>
 <input type="text" name="recipe[name]" value= "<%=@recipe.name%>">
+<br>
 <label for="description"> Recipe:</label>
 <textarea name="recipe[description]" cols="50" rows="20"><%=@recipe.description%></textarea>
+<br>
 <label for="ingredients"> Ingredients:</label>
-<input type ="text" name="ingredients[][name]" value = "<%=@ingredients0%>">
-<input type ="text" name="ingredients[][name]" value = "<%=@recipe.ingredients[1].name%>">
-<input type ="text" name="ingredients[][name]" value = "<%=@recipe.ingredients[2].name%>">
+<input type ="text" name="ingredients[][name]" value = "<%=@ingredient0%>">
+<input type ="text" name="ingredients[][name]" value = "<%=@ingredient1%>">
+<input type ="text" name="ingredients[][name]" value = "<%=@ingredient2%>">
 <input type="submit">
 </form>
