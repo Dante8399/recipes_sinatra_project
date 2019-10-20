@@ -20,8 +20,16 @@ class RecipesController < ApplicationController
 
     #CREATE new page
     get '/recipes/new' do
-
+        if logged_in?
+            @user = current_user
+        #@recipes = Recipe.where(user_id: session[:user_id])
+        @recipes = @user.recipes
         erb :"recipes/new"
+        else
+            redirect "/login"
+        end
+
+        
         
     end
 
